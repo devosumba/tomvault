@@ -1699,7 +1699,9 @@ html.mobile .showForMobileInline {
 		transform: translate3d(0,-100%,0);
 		opacity: 0;
 	}
-
+	.lastSlideOnly{
+		height: 100px;
+	}
 	.animated &.bottom,
 	.animateOnEvent &.bottom,
 	.hidePanel-bottom &.bottom.hideOnScroll,
