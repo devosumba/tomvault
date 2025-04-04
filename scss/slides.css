@@ -5741,7 +5741,7 @@ body {
   align-items: flex-end;
 }
 .flex.horizontalCenter {
-  justify-content: center;
+  justify-content: space-between;
 }
 .flex.reverse {
   flex-wrap: wrap-reverse;
