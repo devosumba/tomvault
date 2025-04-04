@@ -11,40 +11,28 @@
   margin: 0;
   --x: calc(var(--posX, 0) * 1px);
   --y: calc(var(--posY, 0) * 1px);
-  background-image:
-    linear-gradient(115deg, rgb(220, 60, 60), rgb(0, 0, 0)),
-    radial-gradient(90% 100% at calc(50% + var(--x)) calc(0% + var(--y)), rgb(255, 80, 80), rgb(22, 0, 45)),
-    radial-gradient(100% 100% at calc(80% - var(--x)) calc(0% - var(--y)), rgb(240, 70, 70), rgb(36, 0, 0)),
-    radial-gradient(150% 210% at calc(100% + var(--x)) calc(0% + var(--y)), rgb(30, 30, 65), rgb(0, 10, 25)),
-    radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), rgb(230, 50, 50), rgb(0, 20, 45)),
-    linear-gradient(60deg, rgb(200, 40, 40), rgb(30, 30, 65));
-  background-blend-mode: overlay, overlay, difference, difference, difference, normal;
+  background-image: url(assets/img/Background2/login-bg-tinted.min.jpg);
 }
 .auth-container {
-            background: rgba(255, 255, 255, 0.39);
+            background: rgb(255, 255, 255);
             backdrop-filter: blur(10px);
-            border-radius: 15px;
             padding: 2rem;
-            color: white;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             -webkit-backdrop-filter: blur(9.3px);
         }
 
         .form-control {
             background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: white;
+            border: 1px solid rgba(0, 0, 0, 0.2);
         }
 
         .form-control:focus {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: rgba(255, 255, 255, 0.3);
-            color: white;
-            box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1);
+            background: rgba(255, 237, 237, 0.15);
+            box-shadow: 0 0 0 0.25rem rgba(255, 252, 252, 0.1);
         }
 
         .form-control::placeholder {
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(99, 99, 99, 0.6);
         }
 
         .btn-primary {
@@ -57,40 +45,7 @@
             background-color: rgb(180, 40, 40);
         }
 
-        .form-switch .form-check-input {
-            background-color: rgba(255, 255, 255, 0.2);
-            border-color: rgba(255, 255, 255, 0.3);
-        }
-
-        .form-switch .form-check-input:checked {
-            background-color: rgb(220, 60, 60);
-            border-color: rgb(220, 60, 60);
-        }
-
-        .nav-tabs {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .nav-tabs .nav-link {
-            color: rgba(255, 255, 255, 0.7);
-            border: none;
-        }
-
-        .nav-tabs .nav-link.active {
-            background: none;
-            border: none;
-            border-bottom: 2px solid rgb(220, 60, 60);
-            color: white;
-        }
-
-        .nav-tabs .nav-link:hover {
-            border-color: transparent;
-            color: white;
-        }
-
-        .tab-pane{
-            height: 310px;
-        }
+        
 
 :root {
   /* The intrinsic width of the underline stroke (in pixels). This is
@@ -121,126 +76,22 @@
   --underline-padding-x: 0.12em;
 }
 
-.tagline {
-  display: inline;
-  --underline-width-scale: calc(var(--underline-width) / var(--underline-intrinsic-width));
-  padding: 0 calc(var(--underline-padding-x) + calc(var(--underline-cap-width) * var(--underline-width-scale)));
-  box-decoration-break: clone;
-  background-repeat: no-repeat;
-  color: white;
-  background-image: linear-gradient(to right top, #ff3939, #f42e2d, #e82320, #dd1511, #d10000);
-  background-position-x:
-    calc(var(--underline-cap-width) * var(--underline-width-scale)),
-    0,
-    100%;
-  background-position-y: calc(100% - var(--underline-offset-y) * -1);
-  background-size:
-    calc(100% - calc(var(--underline-cap-width) * var(--underline-width-scale) * 2)) calc(var(--underline-width) * 1px),
-    auto calc(var(--underline-width) * 1px),
-	auto calc(var(--underline-width) * 1px);
-
-  font-size: 2.2rem;
-  font-weight: bold;
-  --underline-width: 20;
-  --underline-offset-y: -2px;
-  /* The cap images to use that form the left and right shape.*/
-  --cap-image-left: url(https://files-6lc03kjqt.now.sh/left-2.svg);
-  --cap-image-right: url(https://files-e7gkh52mq.now.sh/right-2.svg);
-}
 
     </style>
 </head>
 <body>
-    
-<!--    <div class="container min-vh-100 d-flex align-items-center justify-content-center">-->
-<!--        <div class="auth-container d-flex flex-wrap  justify-content-center">-->
+    <div class="p-5 text-center">
+        <img class="img-fluid mb-4" style="width: 200px"  src="assets/img/login.png" alt="  "/>
+    </div>
+    <div class="container d-flex flex-wrap  justify-content-center text-center">
+        <div class="auth-container container row col-sm-4 d-flex flex-wrap align-items-center justify-content-center  ">
+            
+            <div class="align-items-center p-2 col-sm-12 mx-auto mt-4">
+                
 
-<!--        -->
-<!--            <div>-->
-<!--                <h1>logo</h1>-->
-<!--                <h5>Redefining the Investment Landscape</h5>-->
-<!--            </div>-->
-<!--            <div class="align-items-center">-->
-<!--                <ul class="nav nav-tabs mb-4" id="authTab" role="tablist">-->
-<!--                    <li class="nav-item flex-fill" role="presentation">-->
-<!--                        <button class="nav-link active w-100" id="signin-tab" data-bs-toggle="tab" data-bs-target="#signin" type="button">Sign In</button>-->
-<!--                    </li>-->
-<!--                    <li class="nav-item flex-fill" role="presentation">-->
-<!--                        <button class="nav-link w-100" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button">Register</button>-->
-<!--                    </li>-->
-<!--                </ul>-->
-
-<!--                <div class="tab-content px-3 " id="authTabContent">-->
-<!--                    &lt;!&ndash; Sign In Form &ndash;&gt;-->
-<!--                    <div class="tab-pane fade show active" id="signin">-->
-<!--                        <form>-->
-<!--                            <div class="mb-3">-->
-<!--                                <input type="email" class="form-control" placeholder="Email address">-->
-<!--                            </div>-->
-<!--                            <div class="mb-3">-->
-<!--                                <input type="password" class="form-control" placeholder="Password">-->
-<!--                            </div>-->
-<!--                            <div class="d-flex justify-content-between align-items-center mb-4">-->
-<!--                                <div class="form-check form-switch">-->
-<!--                                    <input class="form-check-input" type="checkbox" id="rememberMe">-->
-<!--                                    <label class="form-check-label" for="rememberMe">Remember me</label>-->
-<!--                                </div>-->
-<!--                                <a href="#" class="text-decoration-none" style="color: rgb(220, 60, 60);">Forgot password?</a>-->
-<!--                            </div>-->
-<!--                            <button type="submit" class="btn btn-primary w-100">Sign In</button>-->
-<!--                        </form>-->
-<!--                    </div>-->
-
-<!--                    &lt;!&ndash; Register Form &ndash;&gt;-->
-<!--                    <div class="tab-pane fade" id="register">-->
-<!--                        <form>-->
-<!--                            <div class="mb-3">-->
-<!--                                <input type="text" class="form-control" placeholder="Full name">-->
-<!--                            </div>-->
-<!--                            <div class="mb-3">-->
-<!--                                <input type="email" class="form-control" placeholder="Email address">-->
-<!--                            </div>-->
-<!--                            <div class="mb-3">-->
-<!--                                <input type="password" class="form-control" placeholder="Password">-->
-<!--                            </div>-->
-<!--                            <div class="mb-3">-->
-<!--                                <input type="password" class="form-control" placeholder="Confirm password">-->
-<!--                            </div>-->
-<!--                            <div class="mb-4">-->
-<!--                                <div class="form-check">-->
-<!--                                    <input class="form-check-input" type="checkbox" id="agreeTerms">-->
-<!--                                    <label class="form-check-label" for="agreeTerms">-->
-<!--                                        I agree to the <a href="#" class="text-decoration-none" style="color: rgb(220, 60, 60);">Terms & Conditions</a>-->
-<!--                                    </label>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <button type="submit" class="btn btn-primary w-100">Create Account</button>-->
-<!--                        </form>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-    <div class="container  min-vh-100 d-flex flex-wrap align-items-center justify-content-center text-center">
-        <div class="auth-container container row col-sm-8 d-flex flex-wrap align-items-center justify-content-center  ">
-            <div class="p-2  col-sm-6 mx-auto grid gap-3">
-                <img class="img-fluid mb-4" style="width: 200px"  src="assets/img/login.png" alt="  "/>
-                <br>
-                <h1 class=" tagline">Redefining the Investment Landscape!</h1>
-            </div>
-            <div class="align-items-center p-2 col-sm-5 mx-auto mt-4">
-                <ul class="nav nav-tabs mb-4" id="authTab" role="tablist">
-                    <li class="nav-item flex-fill" role="presentation">
-                        <button class="nav-link active w-100" id="signin-tab" data-bs-toggle="tab" data-bs-target="#signin" type="button">Sign In</button>
-                    </li>
-                    <li class="nav-item flex-fill" role="presentation">
-                        <button class="nav-link w-100" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button">Register</button>
-                    </li>
-                </ul>
-
-                <div class="tab-content " id="authTabContent">
+                <div class=" mb-3" id="authTabContent">
                     <!-- Sign In Form -->
-                    <div class="tab-pane fade show active" id="signin">
+                    <div class=" fade show active" id="signin">
                         <form>
                             <div class="mb-3">
                                 <input type="email" class="form-control" placeholder="Email address">
@@ -253,38 +104,22 @@
                                     <input class="form-check-input" type="checkbox" id="rememberMe">
                                     <label class="form-check-label" for="rememberMe">Remember me</label>
                                 </div>
-                                <a href="#" class="text-decoration-none fw-bold" style="color: rgb(220, 60, 60);">Forgot password?</a>
+                                <a href="#" class=" " style="color: rgb(160, 160, 160);">Forgot password</a>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Sign In</button>
                         </form>
                     </div>
 
-                    <!-- Register Form -->
-                    <div class="tab-pane fade" id="register">
-                        <form>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Full name">
-                            </div>
-                            <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="Email address">
-                            </div>
-                            <div class="mb-3">
-                                <input type="password" class="form-control" placeholder="Password">
-                            </div>
-                            <div class="mb-3">
-                                <input type="password" class="form-control" placeholder="Confirm password">
-                            </div>
-                            <div class="mb-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="agreeTerms">
-                                    <label class="form-check-label" for="agreeTerms">
-                                        I agree to the <a href="#" class="text-decoration-none" style="color: rgb(220, 60, 60);">Terms & Conditions</a>
-                                    </label>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Create Account</button>
-                        </form>
-                    </div>
+                </div>
+
+                <div>
+
+		<p class="fw-bold text-start">This Tom Vault website is by invitation only.</p>
+		<ul class="pl-4 text-start">
+			<li>If you have received an invitation, you must first create a login by following the link provided in the email sent to you.</li>
+			<li>If you have not received an invitation, and think you should have, please contact your Renaissance representative.</li>
+		</ul>
+	
                 </div>
             </div>
         </div>
