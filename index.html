@@ -156,7 +156,78 @@
               font-style: normal;
             }
 
+            .modal-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
 
+        .modal {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+            position: relative;
+            color: #2d2d2d;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .modal-header svg {
+		width: 30px;
+		height: 30px;
+    color: #f44336;
+	}
+
+        .modal-title {
+            margin: 0;
+            font-size: 5rem;
+        }
+
+        .close-button {
+            background: none;
+            border: none;
+            font-size: 5rem;
+            cursor: pointer;
+            padding: 0;
+            color: #666;
+        }
+
+        .modal-body {
+            margin-bottom: 20px;
+            font-size: 12px !important;
+        }
+
+      .modal-body p{
+        font-size: large;
+      }
+
+        .modal-button {
+            padding: 8px 16px;
+            background-color: #2c7be5;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .modal-button:hover {
+            background-color: #1a68d1;
+        }
 
 
   </style>
@@ -646,53 +717,7 @@
 
 <!-- Slide 6 (#95) -->
 
-<!--<section class="slide fade-6 kenBurns">
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
 
-        <div class="fix-12-12">
-          <div class="fix-7-12">
-            
-            <h1 class="ae-2 huge fromAbove margin-bottom-2">Let's Get In Touch!</h1>
-            <p class="hero ae-2 margin-bottom-3"><span class="opacity-8">We value open communication and are always ready to connect!</span></p>
-            a href="#" class="button green gradient ae-3">Purchase</a>
-          </div>
-          <div class="fix-3-12">
-            
-          </div>
-          
-          <ul class="grid fixedSpaces left margin-top-10">
-            <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-4 fromLeft">
-             <h3>Inspiration</h3>
-             <p class="tiny opacity-6">We live in a society where everybody feels guilty.</p>
-            </li>
-            <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-5 fromLeft">
-             <h3>Creativity</h3>
-             <p class="tiny opacity-6">You don’t have to be “a creative” to be creative.</p>
-            </li>
-            <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-6 fromLeft">
-             <h3>Fashion</h3>
-             <p class="tiny opacity-6">There is no such thing as simple. Simple is hard.</p>
-            </li>
-            <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-7 fromLeft">
-             <h3>Photography</h3>
-             <p class="tiny opacity-6">Design makes what was once impossible possible.</p>
-            </li>-->
-<!--          </ul>-->
-<!--          <form class="slides-form" action="#" autocomplete="off">-->
-<!--            <input type="Name" class="input-9 ae-5 fromCenter" name="user-name" placeholder="Name" val=""/>-->
-<!--            <input type="email" class="input-9 ae-4 fromCenter" name="user-email" placeholder="Email" val=""/>-->
-<!--            <input type="message" class="input-9 ae-6 fromCenter" name="Confirm" placeholder="Message" val=""/>-->
-<!--            <button type="submit" class="button red gradient ae-7 fromCenter" name="button">Get Started</button>-->
-<!--          </form>-->
-<!--        </div>-->
-
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--  <div class="background" style="background-image:url(assets/img/Background2/2.png)"></div>-->
-<!--</section>-->
 
 <section class="slide fade-6 kenBurns fromLeft " id="contact">
   <div class="content">
@@ -737,23 +762,97 @@
             </li>
           </ul>
         </div>
+        
       </div>
     </div>
   </div>
+
+    <div data-cid="panel-bottom-03-a84eec41">
+      <nav class="panel bottom forceMobileView black ">
+        <div class="sections desktop">
+        
+          <div class="center"><span class="opacity-8 semiBold">
+            <a  class="modal-link" id="openModalLink" style="text-decoration: underline;">Disclaimer</a>
+             &nbsp;•&nbsp; Copyright ©2025 All rights reserved | Tomvault</span></div>
+          
+        </div>
+      
+      </nav>
+    
+      </div>
+
+  </div>
+
+  
   <div class="background" style="background-image:url('assets/img/stock.jpg')"></div>
 </section>
 
-<!-- Panel Bottom #15 -->
 
-<nav class="panel bottom  lastSlideOnly">
-  <div class="sections">
-    <div class="center"><a href="#" class="opacity-8">Copyright ©2025 All rights reserved | Tomvault</a></div>
-  </div>
-</nav>
 
 
 <!-- Loading Progress Bar -->
 <div class="progress-bar blue"></div>
+<div class="modal-container" id="modalContainer">
+  <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-container-title">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <path fill="none" d="M0 0h24v24H0z" />
+            <path fill="currentColor" d="M14 9V4H5v16h6.056c.328.417.724.785 1.18 1.085l1.39.915H3.993A.993.993 0 0 1 3 21.008V2.992C3 2.455 3.449 2 4.002 2h10.995L21 8v1h-7zm-2 2h9v5.949c0 .99-.501 1.916-1.336 2.465L16.5 21.498l-3.164-2.084A2.953 2.953 0 0 1 12 16.95V11zm2 5.949c0 .316.162.614.436.795l2.064 1.36 2.064-1.36a.954.954 0 0 0 .436-.795V13h-5v3.949z" />
+          </svg> 
+          Disclaimer
+        </h2>
+
+          <button class="close-button" id="closeModalButton">&times;</button>
+      </div>
+      <div class="modal-body">
+          <p>The materials on this website are for illustration and discussion purposes only and do not
+            constitute an offering. An offering may be made only by delivery of a confidential offering
+            memorandum to appropriate investors. PAST PERFORMANCE IS NO GUARANTEE OF
+            FUTURE RESULTS.
+            <br>
+            www.tomvault.org is the only official Tomvault website. Neither Tomvault Investments LLP
+            nor any of its affiliates operates any other publicly available website. Other websites
+            purporting to be associated with our firm or our funds are not legitimate.</p>
+      </div>
+  </div>
+</div>
+<script>
+  // Get DOM elements
+  const openModalLink = document.getElementById('openModalLink');
+  const modalContainer = document.getElementById('modalContainer');
+  const closeModalButton = document.getElementById('closeModalButton');
+  const closeModalButtonFooter = document.getElementById('closeModalButtonFooter');
+
+  // Function to open the modal
+  function openModal() {
+      modalContainer.style.display = 'flex';
+  }
+
+  // Function to close the modal
+  function closeModal() {
+      modalContainer.style.display = 'none';
+  }
+
+  // Event listeners
+  openModalLink.addEventListener('click', openModal);
+  closeModalButton.addEventListener('click', closeModal);
+  closeModalButtonFooter.addEventListener('click', closeModal);
+
+  // Close modal when clicking outside of it
+  modalContainer.addEventListener('click', function(event) {
+      if (event.target === modalContainer) {
+          closeModal();
+      }
+  });
+
+  // Close modal with Escape key
+  document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && modalContainer.style.display === 'flex') {
+          closeModal();
+      }
+  });
+</script>
 		
 </body>
 </html>
